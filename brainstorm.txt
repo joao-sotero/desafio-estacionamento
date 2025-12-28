@@ -1,0 +1,60 @@
+brainstorm
+
+1 - veiculo (carro, moto, caminhao)
+	-> placa, marca, modelo, cor, tipo(carro, moto, caminhão), datetime de entrada do veiculo, datetime de saida do veiculo
+	-> mês recorrente
+	
+2 - Vagas(carro, moto, caminhão) -> saber a quantidade para cada vaga
+
+3 - cobrança(hora / diaria / mês ) -> todos que entram no estacionamento sem plano ativo vai pra hora, podendo o cliente mudar para diaria ou mês
+	hora -> preço base + preço por hora => pode se tornar um mes / pode se tornar uma diaria
+	diaria -> preço fixo da diaria => pode se tornar um mês
+	mês -> preço fixo mês => plano pre-pago/ plano recorrente
+	=> motorista com varios carros no mês recorrente(tag para reconhecer veiculos do motorista)
+	
+4 - usuários do sistema (gerente/)
+5 - convenios com empresas
+6 - 
+7 - 
+8 - 
+
+MVP
+
+hora => hora minima para variação
+
+1 - tempo maximo sem pagamento 15MIN
+checking e checkout
+cobrança -> realizar calculo de valor para veiculo (carro, moto, caminhão)
+
+2 - debito, crdito, pix, dinheiro(especie)
+	hora -> ok
+	diaria -> (definir pre-pagou pós pago)
+	mes -> (criar dois planos, pré pago para um mês e recorrente no cartão de credito)
+	
+	hora/diaria/mes-pre-pago -> pix/credito/debido
+	recorrente mês -> so pode cartão credito
+	****OBS: podem sugir novos meios de pagamento
+	****OBS: mudança de getway de pagamento
+
+3 - 
+	gerenciamento de vagas disponiveis/ocupadas
+
+4 -
+	usuario gerente
+	usuario pagamento
+	usuario de operador
+	
+	usuario joao{
+	 reoles: [
+		gerente,
+		pagamento,
+		operador
+	 ]
+	 
+	 
+	 operador -> role -> ok
+	}
+
+5 - regra de reentrada
+	
+	manter veiculo com mesma cobrança após saida de 10min (parametrizado)
